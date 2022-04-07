@@ -1,8 +1,8 @@
 package com.eduardo.delivery.entities.enums;
 
 public enum OrderStatus {
-    PENDING(1),
-    DELIVERED(2);
+    PENDING(0),
+    DELIVERED(1);
 
     private int value;
 

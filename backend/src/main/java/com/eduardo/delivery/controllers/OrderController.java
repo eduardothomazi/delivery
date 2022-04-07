@@ -1,6 +1,5 @@
 package com.eduardo.delivery.controllers;
 
-import com.eduardo.delivery.entities.Order;
 import com.eduardo.delivery.entities.dto.OrderDTO;
 import com.eduardo.delivery.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +24,13 @@ public class OrderController {
     public ResponseEntity<List<OrderDTO>> findAll() {
         List<OrderDTO> dtoList = service.findAll();
         return ResponseEntity.ok().body(dtoList);
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<OrderDTO> insert(@RequestBody OrderDTO dto){
+        dto = service.insert(dto);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
+        return ResponseEntity.created(uri).body(dto);
     }
 
 }

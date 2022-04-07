@@ -1,5 +1,7 @@
 package com.eduardo.delivery.entities;
 
+import com.eduardo.delivery.entities.dto.ProductDTO;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
@@ -26,6 +28,14 @@ public class Product implements Serializable {
         this.price = price;
         this.description = description;
         this.imageUri = imageUri;
+    }
+
+    public Product(ProductDTO dto) {
+        this.id = dto.getId();
+        this.name = dto.getName();
+        this.price = dto.getPrice();
+        this.description = dto.getDescription();
+        this.imageUri = dto.getImageUri();
     }
 
     public Long getId() {
