@@ -33,7 +33,14 @@ public class OrderService {
         repository.save(order);
          order.getProducts().addAll(dto.getProducts().stream().map(x -> new Product(x)).collect(Collectors.toList()));
         return new OrderDTO(order);
+    }
 
+    @Transactional
+    public OrderDTO setDelivered(Long id){
+        Order order = repository.getById(id);
+        order.setStatus(OrderStatus.toEnum(1));
+        order = repository.save(order);
+        return new OrderDTO(order);
     }
 
 }
