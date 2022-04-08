@@ -1,7 +1,3 @@
-## Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # Delivey app
 
 This is the front end part of delivery app made with React.
