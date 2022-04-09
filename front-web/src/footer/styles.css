@@ -1,0 +1,13 @@
+.home-footer{
+    background-color: #263238;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+.github-img-link{
+    margin: 10px;
+}
+
