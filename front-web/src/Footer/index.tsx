@@ -3,7 +3,6 @@ import { ReactComponent as Linkedin} from './Linkedin.svg'
 import { ReactComponent as Github} from './Github.svg'
 
 function Footer(){
-    const linkMainBar="https://github.com"
     return(
         <footer className='home-footer'>
                 <div className='footer-img-links'>

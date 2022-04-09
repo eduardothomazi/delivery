@@ -3,11 +3,11 @@ import {ReactComponent as Logo} from './logo.svg'
 
 
 function Navbar(){
-    const linkMainBar="https://github.com"
+    const linkMainBar="/"
     return(
         <nav className="main-navbar">
             <a className='logo-img' href={linkMainBar}>
-            <Logo></Logo>
+            <Logo/>
             </a>
             <a className='logo-txt' href={linkMainBar}>
                 Delivery app
