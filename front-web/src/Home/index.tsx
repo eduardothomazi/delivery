@@ -1,6 +1,5 @@
 import './styles.css'
 import { ReactComponent as MainImage } from './Main.svg'
-import Footer from '../Footer'
 import { Link } from 'react-router-dom'
 
 function Home() {
@@ -23,7 +22,7 @@ function Home() {
                 </div>
 
             </div>
-            <Footer />
+            
         </>
     )
 }
