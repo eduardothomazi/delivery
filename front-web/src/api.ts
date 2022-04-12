@@ -1,7 +1,7 @@
 import axios from "axios";
 import { OrderPayload } from "./Orders/types";
 
-const API_URL = 'http://ec2-3-224-125-117.compute-1.amazonaws.com'
+const API_URL = 'https://delivery-app-eduardo.herokuapp.com/'
 const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX
 
 export function fetchProducts(){
